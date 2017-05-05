@@ -131,8 +131,7 @@ function FileUpload(){
           
       }
       
-           
-
+//调用addToken方法，获取到服务器中的session值，放入页面中
 function addToken(){
 
 	$.post("<%=path%>/common/addToken",
@@ -447,6 +446,7 @@ function addToken(){
 						</div>
 						<div class="modal-body">
 							<form class="form-horizontal" id="bugModelForm" name="bugModelForm"action="<%=path%>/toAddBug?bid=${id}&pid=${pid}"   enctype="multipart/form-data"  method="post" >
+							        //用来存放session的值
 								<input type="text" id="token" name="token" value="${token}">
 								<div class="tabBug">
 									<ul class="nav nav-tabs" role="tablist">
