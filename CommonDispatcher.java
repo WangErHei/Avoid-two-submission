@@ -18,6 +18,7 @@ public class CommonDispatcher {
 		return view;
 	}
 	
+	//往页面返回session值
 	@Token(saveToken=true)
 	@RequestMapping("/addToken")
 	@ResponseBody
