@@ -53,6 +53,7 @@ public class ProjectAddBugController {
 	
 	
 	@RequestMapping("/toAddBug")
+        //当提交完表单之后，清空session的值
 	@Token(removeToken=true)
 	public  String addBug(HttpServletRequest  req,int bid,int pid) throws ParseException{
 	String title = req.getParameter("bug_title");
